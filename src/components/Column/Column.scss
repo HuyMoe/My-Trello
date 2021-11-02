@@ -1,0 +1,35 @@
+@import "../../assets/style/Styles.scss";
+
+.columns {
+  flex: 0 0 auto;
+  width: 300px;
+  height: calc(100% - #{$gap});
+  margin-left: $gap;
+  > * {
+    background-color: $content-bg-color;
+    padding: 0 8px;
+  }
+  header {
+    padding-left: 15px;
+    height: $header-height;
+    line-height: $header-height;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: $header-radius;
+    border-top-right-radius: $header-radius;
+  }
+  footer {
+    padding-left: 10px;
+    height: $footer-height;
+    line-height: $footer-height;
+    font-size: 16px;
+    border-bottom-left-radius: $footer-radius;
+    border-bottom-right-radius: $footer-radius;
+  }
+  ul.task-list {
+    list-style-type: none;
+    margin: 0;
+    max-height: calc(100% - #{$header-height} - #{$footer-height});
+    overflow-y: auto;
+  }
+}
